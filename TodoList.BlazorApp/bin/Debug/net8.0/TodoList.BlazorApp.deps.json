@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TodoList.BlazorApp/1.0.0": {
+        "dependencies": {
+          "TodoList.Models": "1.0.0"
+        },
+        "runtime": {
+          "TodoList.BlazorApp.dll": {}
+        }
+      },
+      "TodoList.Models/1.0.0": {
+        "runtime": {
+          "TodoList.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TodoList.BlazorApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TodoList.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
