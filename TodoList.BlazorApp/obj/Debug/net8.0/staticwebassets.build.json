@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xAE5f5lMVzDSgQD7hh9wkwBNuQ7A5h48+gld5RtR7Qw=",
+  "Hash": "EMWa3StXHRscSHTShoqGgg9mryFoF6f5Uvcs4bXJu+8=",
   "Source": "TodoList.BlazorApp",
   "BasePath": "_content/TodoList.BlazorApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "TodoList.BlazorApp\\wwwroot",
       "Source": "TodoList.BlazorApp",
-      "ContentRoot": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\",
+      "ContentRoot": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\",
       "BasePath": "_content/TodoList.BlazorApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TodoList.BlazorApp.styles.css",
+      "Identity": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TodoList.BlazorApp.styles.css",
       "SourceId": "TodoList.BlazorApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/TodoList.BlazorApp",
       "RelativePath": "TodoList.BlazorApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TodoList.BlazorApp.styles.css"
+      "OriginalItemSpec": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TodoList.BlazorApp.styles.css"
     },
     {
-      "Identity": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TodoList.BlazorApp.bundle.scp.css",
+      "Identity": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TodoList.BlazorApp.bundle.scp.css",
       "SourceId": "TodoList.BlazorApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/TodoList.BlazorApp",
       "RelativePath": "TodoList.BlazorApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TodoList.BlazorApp.bundle.scp.css"
+      "OriginalItemSpec": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TodoList.BlazorApp.bundle.scp.css"
     },
     {
-      "Identity": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\app.css",
+      "Identity": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\app.css",
       "SourceId": "TodoList.BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\",
+      "ContentRoot": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\",
       "BasePath": "_content/TodoList.BlazorApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "TodoList.BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\",
+      "ContentRoot": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\",
       "BasePath": "_content/TodoList.BlazorApp",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "TodoList.BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\",
+      "ContentRoot": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\",
       "BasePath": "_content/TodoList.BlazorApp",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\favicon.png",
+      "Identity": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\favicon.png",
       "SourceId": "TodoList.BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlazorProject\\TodoList\\TodoList.BlazorApp\\wwwroot\\",
+      "ContentRoot": "D:\\BlazorProject\\TodoListBlazor\\TodoList.BlazorApp\\wwwroot\\",
       "BasePath": "_content/TodoList.BlazorApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
