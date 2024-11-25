@@ -31,3 +31,4 @@ D:\BlazorProject\TodoList\TodoList.BlazorApp\bin\Debug\net8.0\TodoList.Models.dl
 D:\BlazorProject\TodoList\TodoList.BlazorApp\bin\Debug\net8.0\TodoList.Models.pdb
 D:\BlazorProject\TodoList\TodoList.BlazorApp\obj\Debug\net8.0\TodoList.BlazorApp.csproj.AssemblyReference.cache
 D:\BlazorProject\TodoList\TodoList.BlazorApp\obj\Debug\net8.0\TodoList.5CEB3F73.Up2Date
+D:\BlazorProject\TodoList\TodoList.BlazorApp\obj\Debug\net8.0\TodoList.BlazorApp.sourcelink.json

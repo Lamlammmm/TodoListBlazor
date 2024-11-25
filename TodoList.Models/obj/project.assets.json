@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BlazorProject\\TodoList\\TodoList.Models\\TodoList.Models.csproj",
+      "projectUniqueName": "D:\\BlazorProject\\TodoListBlazor\\TodoList.Models\\TodoList.Models.csproj",
       "projectName": "TodoList.Models",
-      "projectPath": "D:\\BlazorProject\\TodoList\\TodoList.Models\\TodoList.Models.csproj",
+      "projectPath": "D:\\BlazorProject\\TodoListBlazor\\TodoList.Models\\TodoList.Models.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\BlazorProject\\TodoList\\TodoList.Models\\obj\\",
+      "outputPath": "D:\\BlazorProject\\TodoListBlazor\\TodoList.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

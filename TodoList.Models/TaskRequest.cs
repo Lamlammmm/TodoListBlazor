@@ -10,6 +10,7 @@ namespace TodoList.Models
         [MaxLength(250)]
         [Required]
         public string Name { get; set; }
+        [Required]
         public Priority Priority { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dfNA+tsqFucI/4s1u33FgqWZVsQ6FcOwoy+i8PXX+gU0uyYU9RqaiKpZjd8Q0F5uXtW670ppB51bhqBddygwng==",
+  "dgSpecHash": "BPiTbR1RV/+u689lPaLt9RtnyQb+s1dCL7QuAObeQ3NXl2LjfZKvRBpl4UIHDW0m9rCxTzEvOjuB3CTErhiSRw==",
   "success": true,
-  "projectFilePath": "D:\\BlazorProject\\TodoList\\TodoList.api\\TodoList.api.csproj",
+  "projectFilePath": "D:\\BlazorProject\\TodoListBlazor\\TodoList.api\\TodoList.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

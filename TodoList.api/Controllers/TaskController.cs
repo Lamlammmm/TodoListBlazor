@@ -35,7 +35,7 @@ namespace TodoList.api.Controllers
 
         [HttpPost]
         [Route("Create")]
-        public async Task<IActionResult> Create(TaskRequest request)
+        public async Task<IActionResult> Create([FromBody]TaskRequest request)
         {
             if (!ModelState.IsValid)
             {

@@ -147,3 +147,4 @@ D:\BlazorProject\TodoList\TodoList.api\bin\Debug\net8.0\Microsoft.Extensions.Ide
 D:\BlazorProject\TodoList\TodoList.api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\BlazorProject\TodoList\TodoList.api\bin\Debug\net8.0\TodoList.Models.dll
 D:\BlazorProject\TodoList\TodoList.api\bin\Debug\net8.0\TodoList.Models.pdb
+D:\BlazorProject\TodoList\TodoList.api\obj\Debug\net8.0\TodoList.api.sourcelink.json
