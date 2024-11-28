@@ -10,7 +10,6 @@ namespace TodoList.BlazorApp.Components.Pages
         [Inject] private ITaskApiClient taskApiClient { get; set; }
         [Inject] private IUsersApiClient usersApiClient { get; set; }
         private List<TasksDto> Tasks;
-        private TaskListSearch TaskListSearchModel = new TaskListSearch();
 
         [SupplyParameterFromForm]
         private TaskListSearch? TaskListSearch { get; set; }

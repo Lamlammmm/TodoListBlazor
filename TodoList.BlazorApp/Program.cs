@@ -1,3 +1,4 @@
+using Blazored.Toast;
 using TodoList.BlazorApp.Components;
 using TodoList.BlazorApp.Services;
 
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddBlazoredToast();
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5191") } );
 builder.Services.AddScoped<ITaskApiClient, TaskApiClient>();

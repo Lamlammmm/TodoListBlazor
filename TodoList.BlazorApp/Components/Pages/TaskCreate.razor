@@ -27,19 +27,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </EditForm>
-@code {
-    [SupplyParameterFromForm]
-    private TaskRequest taskRequest { get; set; }
-    protected override async Task OnInitializedAsync()
-    {
-        taskRequest ??= new();
-    }
-    private async Task SubmitTask(EditContext editContext)
-    {
-        var result = await TaskApiClient.CreateTask(taskRequest);
-        if (result)
-        {
-            NavigationManager.NavigateTo("/TaskList");
-        }
-    }
-}
+

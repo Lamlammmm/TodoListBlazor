@@ -11,7 +11,7 @@ namespace TodoList.BlazorApp.Services
             _httpClient = httpClient;
         }
 
-        public async Task<bool> CreateTask(TaskRequest taskRequest)
+        public async Task<bool> CreateTask(TaskCreateRequest taskRequest)
         {
             var result = await _httpClient.PostAsJsonAsync("api/Task/Create", taskRequest);
             return result.IsSuccessStatusCode;
@@ -28,6 +28,12 @@ namespace TodoList.BlazorApp.Services
             var url = $"api/Task?name={taskListSearch.Name}&assigneeid={taskListSearch.AssigneeId}&priority={taskListSearch.Priority}";
             var result = await _httpClient.GetFromJsonAsync<List<TasksDto>>(url);
             return result;
+        }
+
+        public async Task<bool> UpdateTask(Guid id, TaskUpdateRequest taskRequest)
+        {
+            var result = await _httpClient.PostAsJsonAsync($"api/Task/Update/{id}", taskRequest);
+            return result.IsSuccessStatusCode;
         }
     }
 }

@@ -6,6 +6,7 @@ namespace TodoList.BlazorApp.Services
     {
         Task<List<TasksDto>> GetTaskList(TaskListSearch taskListSearch);
         Task<TasksDto> GetTaskById(Guid Id);
-        Task<bool> CreateTask(TaskRequest taskRequest);
+        Task<bool> CreateTask(TaskCreateRequest taskRequest);
+        Task<bool> UpdateTask(Guid id, TaskUpdateRequest taskRequest);
     }
 }

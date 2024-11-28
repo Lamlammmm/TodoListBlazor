@@ -1,0 +1,34 @@
+﻿@page "/taskEdit/{TaskId}"
+@using TodoList.Models.Enums
+@using TodoList.BlazorApp.Components.ComponentLayouts
+
+
+@if (TaskUpdateRequest == null)
+{
+    <LoadingIndicator></LoadingIndicator>
+}
+else
+{
+    <CancelButton></CancelButton>
+    <EditForm Model="TaskUpdateRequest" OnValidSubmit="UpdateTask" FormName="TaskEditForm">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <InputText class="form-control" @bind-Value="TaskUpdateRequest.Name" />
+            <small id="Name" class="form-text text-muted">Enter task title here.</small>
+            <ValidationMessage For="() => TaskUpdateRequest.Name" />
+        </div>
+        <div class="form-group">
+            <label>Priority</label>
+            <InputSelect class="form-control" @bind-Value="@TaskUpdateRequest.Priority">
+                <option>Select a priority</option>
+                @foreach (var item in Enum.GetNames(typeof(Priority)))
+                {
+                    <option value="@item">@item</option>
+                }
+            </InputSelect>
+            <small id="Name" class="form-text text-muted">Choose a priority.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </EditForm>
+}

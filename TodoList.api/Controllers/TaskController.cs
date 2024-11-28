@@ -35,7 +35,7 @@ namespace TodoList.api.Controllers
 
         [HttpPost]
         [Route("Create")]
-        public async Task<IActionResult> Create([FromBody]TaskRequest request)
+        public async Task<IActionResult> Create([FromBody]TaskCreateRequest request)
         {
             if (!ModelState.IsValid)
             {
@@ -79,14 +79,14 @@ namespace TodoList.api.Controllers
         }
 
         [HttpPost]
-        [Route("Update")]
-        public async Task<IActionResult> Update(TaskRequest request)
+        [Route("Update/{id}")]
+        public async Task<IActionResult> Update([FromRoute] Guid id, TaskUpdateRequest request)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var item = await _taskRepository.GetById(request.Id);
+            var item = await _taskRepository.GetById(id);
             if (item == null)
             {
                 return NotFound();

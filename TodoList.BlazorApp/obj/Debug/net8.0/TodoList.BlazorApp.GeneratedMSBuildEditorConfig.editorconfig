@@ -22,8 +22,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/LoadingIndicator.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMb2FkaW5nSW5kaWNhdG9yLnJhem9y
+[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/ComponentLayouts/CancelButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXENhbmNlbEJ1dHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/ComponentLayouts/LoadingIndicator.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXExvYWRpbmdJbmRpY2F0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/ComponentLayouts/PriorityLabel.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXFByaW9yaXR5TGFiZWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/ComponentLayouts/StatusLabel.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXFN0YXR1c0xhYmVsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/Pages/Error.razor]
@@ -42,20 +54,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrRGV0YWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/Pages/TaskEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/Pages/TaskList.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/PriorityLabel.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcmlvcml0eUxhYmVsLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/StatusLabel.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdGF0dXNMYWJlbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/_Imports.razor]

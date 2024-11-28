@@ -66,3 +66,11 @@ D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\obj\Debug\net8.0\refint\TodoL
 D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\obj\Debug\net8.0\TodoList.BlazorApp.pdb
 D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\obj\Debug\net8.0\TodoList.BlazorApp.genruntimeconfig.cache
 D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\obj\Debug\net8.0\ref\TodoList.BlazorApp.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Blazored.Toast.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.JSInterop.dll

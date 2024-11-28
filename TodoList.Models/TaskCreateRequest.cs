@@ -3,7 +3,7 @@ using TodoList.Models.Enums;
 
 namespace TodoList.Models
 {
-    public class TaskRequest
+    public class TaskCreateRequest
     {
         public Guid Id { get; set; }
 
