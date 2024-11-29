@@ -7,8 +7,11 @@ namespace TodoList.BlazorApp.Components.Pages
 {
     public partial class TaskList
     {
-        [Inject] private ITaskApiClient taskApiClient { get; set; }
-        [Inject] private IUsersApiClient usersApiClient { get; set; }
+        [Inject] 
+        private ITaskApiClient taskApiClient { get; set; }
+        [Inject] 
+        private IUsersApiClient usersApiClient { get; set; }
+
         private List<TasksDto> Tasks;
 
         [SupplyParameterFromForm]
@@ -19,12 +22,29 @@ namespace TodoList.BlazorApp.Components.Pages
         protected override async Task OnInitializedAsync()
         {
             TaskListSearch ??= new();
+            await GetTask();
 
-            Tasks = await taskApiClient.GetTaskList(TaskListSearch);
             Assignees = await usersApiClient.GetAssignee();
         }
 
         private async Task SearchForm(EditContext context)
+        {
+            await GetTask();
+        }
+
+        private async Task DeleteTask(Guid id)
+        {
+            if (id != null)
+            {
+                var result = await taskApiClient.DeleteTask(id);
+                if (result)
+                {
+                    await GetTask();
+                }
+            }
+        }
+
+        private async Task GetTask()
         {
             Tasks = await taskApiClient.GetTaskList(TaskListSearch);
         }

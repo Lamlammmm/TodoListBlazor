@@ -17,6 +17,12 @@ namespace TodoList.BlazorApp.Services
             return result.IsSuccessStatusCode;
         }
 
+        public async Task<bool> DeleteTask(Guid id)
+        {
+            var result = await _httpClient.DeleteAsync($"api/Task/Delete/{id}");
+            return result.IsSuccessStatusCode;
+        }
+
         public async Task<TasksDto> GetTaskById(Guid Id)
         {
             var result = await _httpClient.GetFromJsonAsync<TasksDto>($"api/Task/{Id}");
@@ -32,7 +38,7 @@ namespace TodoList.BlazorApp.Services
 
         public async Task<bool> UpdateTask(Guid id, TaskUpdateRequest taskRequest)
         {
-            var result = await _httpClient.PostAsJsonAsync($"api/Task/Update/{id}", taskRequest);
+            var result = await _httpClient.PutAsJsonAsync($"api/Task/Update/{id}", taskRequest);
             return result.IsSuccessStatusCode;
         }
     }

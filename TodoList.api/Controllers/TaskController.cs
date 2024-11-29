@@ -78,7 +78,7 @@ namespace TodoList.api.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("Update/{id}")]
         public async Task<IActionResult> Update([FromRoute] Guid id, TaskUpdateRequest request)
         {
@@ -97,9 +97,9 @@ namespace TodoList.api.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        [Route("Delete")]
-        public async Task<IActionResult> Delete(Guid id)
+        [HttpDelete]
+        [Route("Delete/{id}")]
+        public async Task<IActionResult> Delete([FromRoute]Guid id)
         {
             if (!ModelState.IsValid)
             {
