@@ -31,11 +31,15 @@ namespace TodoList.BlazorApp.Components.Pages
         const int pageSize = 10;
 
         [Parameter]
-        public string currentPage { get; set; } = "1";
+        public string currentPage { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
             TaskListSearch ??= new();
+            if (currentPage == null)
+            {
+                currentPage = "1";
+            }
             PageRequest = new PageRequest()
             {
                 PageIndex = int.Parse(currentPage),

@@ -12,19 +12,17 @@ namespace TodoList.api.Repositories
         {
             _todoListDbContext = todoListDbContext;
         }
-        public async Task<Entities.Task> Create(Entities.Task task)
+        public async Task<int> Create(Entities.Task task)
         {
             await _todoListDbContext.Task.AddAsync(task);
-            await _todoListDbContext.SaveChangesAsync();
-            return task;
+            return await _todoListDbContext.SaveChangesAsync();
         }
 
-        public async Task<Entities.Task> Delete(Guid Id)
+        public async Task<int> Delete(Guid Id)
         {
             var item = await _todoListDbContext.Task.FindAsync(Id);
             _todoListDbContext.Task.Remove(item);
-            await _todoListDbContext.SaveChangesAsync();
-            return item;
+            return await _todoListDbContext.SaveChangesAsync();
         }
 
         public async Task<Entities.Task> GetById(Guid Id)
@@ -54,11 +52,10 @@ namespace TodoList.api.Repositories
             return result;
         }
 
-        public async Task<Entities.Task> Update(Entities.Task task)
+        public async Task<int> Update(Entities.Task task)
         {
             _todoListDbContext.Task.Update(task);
-            await _todoListDbContext.SaveChangesAsync();
-            return task;
+            return await _todoListDbContext.SaveChangesAsync();
         }
     }
 }

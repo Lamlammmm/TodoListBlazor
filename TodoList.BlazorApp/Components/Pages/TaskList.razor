@@ -1,4 +1,5 @@
-﻿@page "/TaskList/Page={currentPage}"
+﻿@page "/TaskList"
+@page "/TaskList/Page={currentPage}"
 @using TodoList.Models.Enums
 @using TodoList.BlazorApp.Components.ComponentLayouts
 @rendermode InteractiveServer
@@ -56,6 +57,7 @@ else
                     <th>Assignee</th>
                     <th>Date</th>
                     <th>Status</th>
+                    <td></td>
                 </tr>
             </thead>
             <tbody>
@@ -67,7 +69,7 @@ else
                         <td>@item.AssigneeName</td>
                         <td>@item.CreatedDate.ToString("dd/MM/yyyy hh:mm")</td>
                         <td><StatusLabel Status="@item.Status"></StatusLabel></td>
-                        <td>
+                        <td class="col-3">
                             <a href="/taskDetail/@item.Id" class="btn btn-info">Details</a>
                             <a href="/taskEdit/@item.Id" class="btn btn-primary">Edit</a>
                             <button class="btn btn-danger" @onclick="() => DeleteTask(item.Id)">Delete</button>
