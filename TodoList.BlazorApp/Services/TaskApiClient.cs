@@ -13,13 +13,13 @@ namespace TodoList.BlazorApp.Services
 
         public async Task<bool> CreateTask(TaskCreateRequest taskRequest)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/Task/Create", taskRequest);
+            var result = await _httpClient.PostAsJsonAsync("api/Task", taskRequest);
             return result.IsSuccessStatusCode;
         }
 
         public async Task<bool> DeleteTask(Guid id)
         {
-            var result = await _httpClient.DeleteAsync($"api/Task/Delete/{id}");
+            var result = await _httpClient.DeleteAsync($"api/Task/{id}");
             return result.IsSuccessStatusCode;
         }
 
@@ -29,16 +29,16 @@ namespace TodoList.BlazorApp.Services
             return result;
         }
 
-        public async Task<List<TasksDto>> GetTaskList(TaskListSearch taskListSearch)
+        public async Task<BaseApiResult<TasksDto>> GetTaskList(TaskListSearch taskListSearch, PageRequest pagingRequest)
         {
-            var url = $"api/Task?name={taskListSearch.Name}&assigneeid={taskListSearch.AssigneeId}&priority={taskListSearch.Priority}";
-            var result = await _httpClient.GetFromJsonAsync<List<TasksDto>>(url);
+            var url = $"api/Task?name={taskListSearch.Name}&assigneeid={taskListSearch.AssigneeId}&priority={taskListSearch.Priority}&pageindex={pagingRequest.PageIndex}&pagesize={pagingRequest.PageSize}";
+            var result = await _httpClient.GetFromJsonAsync<BaseApiResult<TasksDto>>(url);
             return result;
         }
 
         public async Task<bool> UpdateTask(Guid id, TaskUpdateRequest taskRequest)
         {
-            var result = await _httpClient.PutAsJsonAsync($"api/Task/Update/{id}", taskRequest);
+            var result = await _httpClient.PutAsJsonAsync($"api/Task/{id}", taskRequest);
             return result.IsSuccessStatusCode;
         }
     }

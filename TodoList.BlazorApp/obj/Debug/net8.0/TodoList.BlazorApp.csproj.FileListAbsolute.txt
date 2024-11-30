@@ -74,3 +74,9 @@ D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.As
 D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
 D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.JSInterop.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\BlazorPagination.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.Bcl.HashCode.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\BlazorProject\TodoListBlazor\TodoList.BlazorApp\bin\Debug\net8.0\Blazor.Pagination.dll

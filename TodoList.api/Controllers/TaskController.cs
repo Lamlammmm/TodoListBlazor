@@ -17,9 +17,9 @@ namespace TodoList.api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery]TaskListSearch taskListSearch)
+        public async Task<IActionResult> GetAll([FromQuery]TaskListSearch taskListSearch, [FromQuery]PageRequest pageRequest)
         {
-            var listTask = await _taskRepository.GetList(taskListSearch);
+            var listTask = await _taskRepository.GetList(taskListSearch, pageRequest);
             var taskDto = listTask.Select(x => new TasksDto()
             {
                 Id = x.Id,
@@ -30,11 +30,24 @@ namespace TodoList.api.Controllers
                 AssigneeId = x.AssigneeId,
                 AssigneeName = x.Assignee != null ? x.Assignee.FirstName + " " + x.Assignee.LastName : "N/A"
             });
-            return Ok(taskDto);
+            int totalItem = taskDto.Count();
+            int totalPage = (int)Math.Ceiling((double)totalItem / pageRequest.PageSize);
+            var result = taskDto.OrderByDescending(x => x.CreatedDate)
+                                .Skip((pageRequest.PageIndex - 1) * pageRequest.PageSize)
+                                .Take(pageRequest.PageSize);
+            
+            return Ok(new BaseApiResult<TasksDto>()
+            {
+                Data = result.ToList(),
+                HttpStatusCode = StatusCodes.Status200OK,
+                Message = "Get List Success",
+                IsSuccess = true,
+                TotalPage = totalPage,
+                TotalItem = totalItem
+            });
         }
 
         [HttpPost]
-        [Route("Create")]
         public async Task<IActionResult> Create([FromBody]TaskCreateRequest request)
         {
             if (!ModelState.IsValid)
@@ -79,7 +92,7 @@ namespace TodoList.api.Controllers
         }
 
         [HttpPut]
-        [Route("Update/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> Update([FromRoute] Guid id, TaskUpdateRequest request)
         {
             if (!ModelState.IsValid)
@@ -98,7 +111,7 @@ namespace TodoList.api.Controllers
         }
 
         [HttpDelete]
-        [Route("Delete/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> Delete([FromRoute]Guid id)
         {
             if (!ModelState.IsValid)

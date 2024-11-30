@@ -1,10 +1,10 @@
-﻿@page "/TaskList"
+﻿@page "/TaskList/Page={currentPage}"
 @using TodoList.Models.Enums
 @using TodoList.BlazorApp.Components.ComponentLayouts
 @rendermode InteractiveServer
 
 <h3>TodoList</h3>
-@if(Tasks == null)
+@if (Tasks == null)
 {
     <LoadingIndicator></LoadingIndicator>
 }
@@ -15,7 +15,7 @@ else
             <div class="row">
                 <div class="col">
                     <label>Name</label>
-                    <InputText class="form-control" @bind-Value="@TaskListSearch.Name"/>
+                    <InputText class="form-control" @bind-Value="@TaskListSearch.Name" />
                 </div>
                 <div class="col">
                     <label>Assignee</label>
@@ -76,5 +76,8 @@ else
                 }
             </tbody>
         </table>
+        <nav>
+            <Paging TotalPage="@apiResult.TotalPage"></Paging>
+        </nav>
     </div>
 }

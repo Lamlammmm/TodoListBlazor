@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXExvYWRpbmdJbmRpY2F0b3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/ComponentLayouts/Paging.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXFBhZ2luZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/ComponentLayouts/PriorityLabel.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXFByaW9yaXR5TGFiZWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
