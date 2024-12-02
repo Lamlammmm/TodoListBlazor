@@ -30,7 +30,7 @@ namespace TodoList.api.Repositories
             return await _todoListDbContext.Task.FindAsync(Id);
         }
 
-        public async Task<IEnumerable<Entities.Task>> GetList(TaskListSearch taskListSearch, PageRequest pagingRequest)
+        public async Task<IEnumerable<Entities.Task>> GetList(TaskListSearchContext taskListSearch)
         {
             var query = _todoListDbContext.Task.Include(x => x.Assignee).AsQueryable();
 
@@ -46,8 +46,6 @@ namespace TodoList.api.Repositories
             {
                 query = query.Where(x => x.Priority == taskListSearch.Priority.Value);
             }
-            int totalItem = query.Count();
-            int totalPage = (int)Math.Ceiling((double)totalItem / pagingRequest.PageSize);
             var result = await query.OrderByDescending(x => x.CreatedDate).ToListAsync();
             return result;
         }

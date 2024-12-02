@@ -4,7 +4,7 @@ namespace TodoList.api.Repositories
 {
     public interface ITaskRepository
     {
-        Task<IEnumerable<Entities.Task>> GetList(TaskListSearch taskListSearch, PageRequest pagingRequest);
+        Task<IEnumerable<Entities.Task>> GetList(TaskListSearchContext taskListSearch);
         Task<int> Create(Entities.Task task);
         Task<int> Update(Entities.Task task);
         Task<int> Delete(Guid Id);

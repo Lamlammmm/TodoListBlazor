@@ -20,7 +20,7 @@ namespace TodoList.BlazorApp.Components.Pages
         private List<TasksDto> Tasks;
 
         [SupplyParameterFromForm]
-        private TaskListSearch? TaskListSearch { get; set; }
+        private TaskListSearchContext? TaskListSearch { get; set; }
 
         private PageRequest PageRequest { get; set; }
 
@@ -28,22 +28,24 @@ namespace TodoList.BlazorApp.Components.Pages
 
         private BaseApiResult<TasksDto> apiResult;
 
-        const int pageSize = 10;
+        //const int pageSize = 10;
 
         [Parameter]
-        public string currentPage { get; set; }
+        public string currentPageString { get; set; }
+
+        public int currentPage { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
             TaskListSearch ??= new();
-            if (currentPage == null)
+            if (currentPageString != null)
             {
-                currentPage = "1";
+                currentPage = int.Parse(currentPageString) - 1;
             }
             PageRequest = new PageRequest()
             {
-                PageIndex = int.Parse(currentPage),
-                PageSize = pageSize
+                PageIndex = currentPage,
+                //PageSize = pageSize
             };
             await GetTask();
             Assignees = await usersApiClient.GetAssignee();

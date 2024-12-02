@@ -7,19 +7,19 @@ namespace TodoList.api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TaskController : ControllerBase
+    public class TasksController : ControllerBase
     {
         private readonly ITaskRepository _taskRepository;
 
-        public TaskController(ITaskRepository taskRepository)
+        public TasksController(ITaskRepository taskRepository)
         {
             _taskRepository = taskRepository;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] TaskListSearch taskListSearch, [FromQuery] PageRequest pageRequest)
+        public async Task<IActionResult> GetAll([FromQuery] TaskListSearchContext taskListSearch)
         {
-            var listTask = await _taskRepository.GetList(taskListSearch, pageRequest);
+            var listTask = await _taskRepository.GetList(taskListSearch);
             var taskDto = listTask.Select(x => new TasksDto()
             {
                 Id = x.Id,
@@ -31,10 +31,10 @@ namespace TodoList.api.Controllers
                 AssigneeName = x.Assignee != null ? x.Assignee.FirstName + " " + x.Assignee.LastName : "N/A"
             });
             int totalItem = taskDto.Count();
-            int totalPage = (int)Math.Ceiling((double)totalItem / pageRequest.PageSize);
+            int totalPage = (int)Math.Ceiling((double)totalItem / taskListSearch.PageSize);
             var result = taskDto.OrderByDescending(x => x.CreatedDate)
-                                .Skip((pageRequest.PageIndex - 1) * pageRequest.PageSize)
-                                .Take(pageRequest.PageSize);
+                                .Skip((taskListSearch.PageIndex) * taskListSearch.PageSize)
+                                .Take(taskListSearch.PageSize);
 
             return Ok(new BaseApiResult<TasksDto>()
             {

@@ -1,5 +1,5 @@
 ﻿@page "/TaskList"
-@page "/TaskList/Page={currentPage}"
+@page "/TaskList/Page={currentPageString}"
 @using TodoList.Models.Enums
 @using TodoList.BlazorApp.Components.ComponentLayouts
 @rendermode InteractiveServer
@@ -21,7 +21,7 @@ else
                 <div class="col">
                     <label>Assignee</label>
                     <InputSelect class="form-control" @bind-Value="@TaskListSearch.AssigneeId">
-                        <option>Select an assignee</option>
+                        <option value="">Select an assignee</option>
                         @foreach (var item in Assignees)
                         {
                             <option value="@item.Id">@item.FullName</option>

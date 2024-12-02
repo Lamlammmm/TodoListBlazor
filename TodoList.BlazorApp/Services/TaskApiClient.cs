@@ -13,32 +13,32 @@ namespace TodoList.BlazorApp.Services
 
         public async Task<bool> CreateTask(TaskCreateRequest taskRequest)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/Task", taskRequest);
+            var result = await _httpClient.PostAsJsonAsync("api/Tasks", taskRequest);
             return result.IsSuccessStatusCode;
         }
 
         public async Task<bool> DeleteTask(Guid id)
         {
-            var result = await _httpClient.DeleteAsync($"api/Task/{id}");
+            var result = await _httpClient.DeleteAsync($"api/Tasks/{id}");
             return result.IsSuccessStatusCode;
         }
 
         public async Task<TasksDto> GetTaskById(Guid Id)
         {
-            var result = await _httpClient.GetFromJsonAsync<TasksDto>($"api/Task/{Id}");
+            var result = await _httpClient.GetFromJsonAsync<TasksDto>($"api/Tasks/{Id}");
             return result;
         }
 
-        public async Task<BaseApiResult<TasksDto>> GetTaskList(TaskListSearch taskListSearch, PageRequest pagingRequest)
+        public async Task<BaseApiResult<TasksDto>> GetTaskList(TaskListSearchContext taskListSearch, PageRequest pagingRequest)
         {
-            var url = $"api/Task?name={taskListSearch.Name}&assigneeid={taskListSearch.AssigneeId}&priority={taskListSearch.Priority}&pageindex={pagingRequest.PageIndex}&pagesize={pagingRequest.PageSize}";
+            var url = $"api/Tasks?name={taskListSearch.Name}&assigneeid={taskListSearch.AssigneeId}&priority={taskListSearch.Priority}&pageindex={pagingRequest.PageIndex}&pagesize={pagingRequest.PageSize}";
             var result = await _httpClient.GetFromJsonAsync<BaseApiResult<TasksDto>>(url);
             return result;
         }
 
         public async Task<bool> UpdateTask(Guid id, TaskUpdateRequest taskRequest)
         {
-            var result = await _httpClient.PutAsJsonAsync($"api/Task/{id}", taskRequest);
+            var result = await _httpClient.PutAsJsonAsync($"api/Tasks/{id}", taskRequest);
             return result.IsSuccessStatusCode;
         }
     }
