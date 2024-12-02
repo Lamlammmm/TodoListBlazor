@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXFN0YXR1c0xhYmVsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/ComponentLayouts/TaskSearch.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRMYXlvdXRzXFRhc2tTZWFyY2gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BlazorProject/TodoListBlazor/TodoList.BlazorApp/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

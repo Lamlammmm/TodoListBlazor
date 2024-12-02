@@ -1,0 +1,63 @@
+﻿@using TodoList.Models
+@using TodoList.Models.Enums
+@using TodoList.BlazorApp.Services
+@inject IUsersApiClient UsersApiClient
+
+@if(Assignees != null)
+{
+    <EditForm Model="TaskListSearch" OnSubmit=@SearchForm FormName="SearchForm">
+        <div class="row">
+            <div class="col">
+                <label>Name</label>
+                <InputText class="form-control" @bind-Value="@TaskListSearch.Name" />
+            </div>
+            <div class="col">
+                <label>Assignee</label>
+                <InputSelect class="form-control" @bind-Value="@TaskListSearch.AssigneeId">
+                    <option value="">Select an assignee</option>
+                    @foreach (var item in Assignees)
+                    {
+                        <option value="@item.Id">@item.FullName</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="col">
+                <label>Priority</label>
+                <InputSelect class="form-control" @bind-Value="@TaskListSearch.Priority">
+                    <option value="">Select a priority</option>
+                    @foreach (var item in Enum.GetNames(typeof(Priority)))
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary mt-4">Search</button>
+            </div>
+            <div class="col">
+                <a href="/TaskCreate" class="btn btn-success mt-4">Create</a>
+            </div>
+        </div>
+    </EditForm>
+}
+
+
+@code {
+    [SupplyParameterFromForm]
+    private TaskListSearchContext? TaskListSearch { get; set; }
+    [Parameter]
+    public EventCallback<TaskListSearchContext> OnSearch { get; set; }
+
+    private List<AssigneeDto> Assignees { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        TaskListSearch ??= new();
+        Assignees = await UsersApiClient.GetAssignee();
+    }
+
+    private async Task @SearchForm()
+    {
+        await OnSearch.InvokeAsync(TaskListSearch);
+    }
+}

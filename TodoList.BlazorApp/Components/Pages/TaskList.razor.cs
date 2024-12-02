@@ -19,9 +19,6 @@ namespace TodoList.BlazorApp.Components.Pages
 
         private List<TasksDto> Tasks;
 
-        [SupplyParameterFromForm]
-        private TaskListSearchContext? TaskListSearch { get; set; }
-
         private PageRequest PageRequest { get; set; }
 
         private List<AssigneeDto> Assignees;
@@ -33,11 +30,13 @@ namespace TodoList.BlazorApp.Components.Pages
         [Parameter]
         public string currentPageString { get; set; }
 
+        TaskListSearchContext searchContext { get; set; }
+
         public int currentPage { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
-            TaskListSearch ??= new();
+            searchContext ??= new();
             if (currentPageString != null)
             {
                 currentPage = int.Parse(currentPageString) - 1;
@@ -51,8 +50,10 @@ namespace TodoList.BlazorApp.Components.Pages
             Assignees = await usersApiClient.GetAssignee();
         }
 
-        private async Task SearchForm(EditContext context)
+        private async Task SearchForm(TaskListSearchContext taskListSearchContext)
         {
+            searchContext = taskListSearchContext;
+            
             await GetTask();
         }
 
@@ -70,7 +71,7 @@ namespace TodoList.BlazorApp.Components.Pages
 
         private async Task GetTask()
         {
-            apiResult = await taskApiClient.GetTaskList(TaskListSearch, PageRequest);
+            apiResult = await taskApiClient.GetTaskList(searchContext, PageRequest);
             Tasks = apiResult.Data;
         }
 

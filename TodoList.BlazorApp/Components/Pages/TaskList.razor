@@ -12,40 +12,7 @@
 else
 {
     <div class="row">
-        <EditForm Model="TaskListSearch" OnSubmit=@SearchForm FormName="SearchForm">
-            <div class="row">
-                <div class="col">
-                    <label>Name</label>
-                    <InputText class="form-control" @bind-Value="@TaskListSearch.Name" />
-                </div>
-                <div class="col">
-                    <label>Assignee</label>
-                    <InputSelect class="form-control" @bind-Value="@TaskListSearch.AssigneeId">
-                        <option value="">Select an assignee</option>
-                        @foreach (var item in Assignees)
-                        {
-                            <option value="@item.Id">@item.FullName</option>
-                        }
-                    </InputSelect>
-                </div>
-                <div class="col">
-                    <label>Priority</label>
-                    <InputSelect class="form-control" @bind-Value="@TaskListSearch.Priority">
-                        <option>Select a priority</option>
-                        @foreach (var item in Enum.GetNames(typeof(Priority)))
-                        {
-                            <option value="@item">@item</option>
-                        }
-                    </InputSelect>
-                </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-primary mt-4">Search</button>
-                </div>
-                <div class="col">
-                    <a href="/TaskCreate" class="btn btn-success mt-4">Create</a>
-                </div>
-            </div>
-        </EditForm>
+        <TaskSearch OnSearch="SearchForm"></TaskSearch>
     </div>
 
     <div class="row mt-4">
