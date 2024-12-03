@@ -401,3 +401,5 @@ FodyWeavers.xsd
 
 TodoList.BlazorApp/bin/*
 TodoList.BlazorApp/obj/*
+/bin/
+/obj/
