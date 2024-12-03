@@ -298,3 +298,4 @@ D:\BlazorProject\TodoListBlazor\TodoList.api\obj\Debug\net8.0\refint\TodoList.ap
 D:\BlazorProject\TodoListBlazor\TodoList.api\obj\Debug\net8.0\TodoList.api.pdb
 D:\BlazorProject\TodoListBlazor\TodoList.api\obj\Debug\net8.0\TodoList.api.genruntimeconfig.cache
 D:\BlazorProject\TodoListBlazor\TodoList.api\obj\Debug\net8.0\ref\TodoList.api.dll
+D:\BlazorProject\TodoListBlazor\TodoList.api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

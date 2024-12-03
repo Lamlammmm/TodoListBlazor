@@ -31,13 +31,16 @@ namespace TodoList.api.EF
                         Id = Guid.NewGuid(),
                         FirstName = "Mr",
                         LastName = "A",
-                        Email = "admin@gmail.com",
-                        PhoneNumber = "1234567890",
-                        UserName = "Admin",
-
+                        Email = "admin1@gmail.com",
+                        NormalizedEmail = "ADMIN1@GMAIL.COM",
+                        PhoneNumber = "032132131",
+                        UserName = "admin",
+                        NormalizedUserName = "ADMIN",
+                        SecurityStamp = Guid.NewGuid().ToString()
                     };
                     user.PasswordHash = _passwordHasher.HashPassword(user, "Admin@123");
                     context.Users.Add(user);
+                    context.SaveChanges();
                 }
             }
         }
